@@ -10,7 +10,7 @@ class NameTest {
     void 유효한_이름은_생성된다() {
         assertEquals("pobi", new Name("pobi").value());
         assertEquals("a", new Name("a").value());
-        assertEquals("abcde", new Name("abcde").value()); // 5자 OK
+        assertEquals("abcde", new Name("abcde").value());
     }
 
     @Test
@@ -21,7 +21,7 @@ class NameTest {
 
     @Test
     void 길이_제한_초과시_예외() {
-        assertThrows(IllegalArgumentException.class, () -> new Name("abcdef")); // 6자
+        assertThrows(IllegalArgumentException.class, () -> new Name("abcdef"));
     }
 
     @Test
